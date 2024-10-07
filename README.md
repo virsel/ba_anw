@@ -19,4 +19,8 @@ https://lemma-rca.github.io/docs/data.html
 vlt kann da mal einer anfragen, email: lemma-rca@gmail.com
 
 ## papers
+rca mit ann:  
 https://www.aasmr.org/jsms/Vol13/No.1/Vol.13.No.1.19.pdf
+
+big data rca framework:
+https://www.sciencedirect.com/science/article/abs/pii/S0360835221004848
