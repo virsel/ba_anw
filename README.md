@@ -24,3 +24,7 @@ https://www.aasmr.org/jsms/Vol13/No.1/Vol.13.No.1.19.pdf
 
 big data rca framework:
 https://www.sciencedirect.com/science/article/abs/pii/S0360835221004848
+
+Automatic Root Cause Analysis via Large Language
+Models for Cloud Incidents:  
+https://arxiv.org/pdf/2305.15778
