@@ -1,10 +1,21 @@
-#### problemstellung
+## problemstellung
 Traditional RCA methods, which rely on manual investigations of data sources such as logs and traces,
 are often laborious, error-prone, and challenging for on-call
 engineers  
 https://arxiv.org/pdf/2305.15778 (Abstract)
 
-#### methodik
+## forschungsfragen
+**Kann KI RCA verbessern?**  
+Erwartung:
+- KI kann Muster und Trends in Daten erkennen, die für Menschen nicht offensichtlich sind
+- Dies hilft, Grundursachen zu identifizieren, die sonst schwer zu finden wären
+- KI kann den RCA-Prozess (Root Cause Analysis) automatisieren
+- Automatisierung spart Zeit und Ressourcen
+- Besonders nützlich für Organisationen mit großen Datenmengen
+- KI kann Erkenntnisse liefern, die mit traditionellen RCA-Methoden nicht möglich wären
+- Diese Erkenntnisse helfen Organisationen, bessere Entscheidungen zur Problemvermeidung zu treffen
+
+## methodik
  The first step is to collect
 system logs from various systems with various formats. The second step is to
 process, convert, and standardize all collected logs from unstructured to structured

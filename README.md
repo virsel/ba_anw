@@ -28,3 +28,7 @@ https://www.sciencedirect.com/science/article/abs/pii/S0360835221004848
 Automatic Root Cause Analysis via Large Language
 Models for Cloud Incidents:  
 https://arxiv.org/pdf/2305.15778
+
+## links
+rca mit machine learning im cloud bereich:  
+https://www.youtube.com/watch?v=yv3TrD7kUb4
