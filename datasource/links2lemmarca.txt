@@ -10,3 +10,36 @@ https://drive.google.com/drive/folders/1YLRviEq4ELrTsrpf8aatM-R4Sq6Bjn8R
 
 
 #die Links zu "RAW"-Data von https://lemma-rca.github.io/docs/data.html sind tot, die Links zu Preprecessed Data funktionieren. Die Mail lemma-rca@gmail.com ist tot.
+
+
+#sonstige Notizen
+
+ - Roter Faden
+    -- Thema
+    -- Kontext
+    -- Problemstellung
+      -  Crisp DM 
+        P1
+        -- Operationalisierung des Problems
+            Quantifizierung des Problems! Definition Messgröße
+        -- Relevanz
+        P2
+        --
+        --
+        P3
+        --
+        --
+        P4
+        --
+        --
+        P5
+        --
+        --
+        P6
+        --
+        --
+        xxx
+    Fazit;
+    -- 
+
+    Ableitung Analyticsproblem: 
