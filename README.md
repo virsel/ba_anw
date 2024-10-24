@@ -32,3 +32,6 @@ https://arxiv.org/pdf/2305.15778
 ## links
 rca mit machine learning im cloud bereich:  
 https://www.youtube.com/watch?v=yv3TrD7kUb4
+
+Webinar: Log Analysis with Machine Learning to Find Root Cause Faster:
+https://www.youtube.com/watch?v=MpYB4Qcl570
