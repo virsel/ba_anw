@@ -29,6 +29,9 @@ Automatic Root Cause Analysis via Large Language
 Models for Cloud Incidents:  
 https://arxiv.org/pdf/2305.15778
 
+Root Cause Analysis Bot using Machine Learning Techniques:
+https://d1wqtxts1xzle7.cloudfront.net/102190311/38370986-libre.pdf?1684026668=&response-content-disposition=inline%3B+filename%3DRoot_Cause_Analysis_Bot_using_Machine_Le.pdf&Expires=1729758094&Signature=HI3f~K6wPe2QrXLhOvfO476HHudzETqF3gVdxtoCt13gAGO0G5EnxxnB4KJ8p1zpnzvM51tWyKTtLqsmn2Iv50fCEoH6nADYmzvEaxc0v-y-f5v91zvtKoaX4sWeK27CfxCYdQ8NXWnlF1dm3AxDvrTgrSSDrXy4PXofyAPNcapMpTiOdSatYmGMsK5ueV1gy~MDev7UcmZk9GO0Au~z0eAE2HPAjthPAPkig7BdV8uF3fIL4VZNniwH0M8k7CyoO4qE06Ehnq1qAs-D8SA4DlgCR3TLrfb8Ko34HhmzZyHnu4y-kKVD0yh1ZCq5~Y~baTmqE8dFfhrqvozRXJt8Ag__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA
+
 ## links
 rca mit machine learning im cloud bereich:  
 https://www.youtube.com/watch?v=yv3TrD7kUb4
