@@ -29,6 +29,9 @@ Automatic Root Cause Analysis via Large Language
 Models for Cloud Incidents:  
 https://arxiv.org/pdf/2305.15778
 
+LogRCA: Log-based Root Cause Analysis for Distributed Services:
+https://arxiv.org/pdf/2405.13599
+
 TESTAUTOMATISIERUNG:
 
 Root Cause Analysis Bot using Machine Learning Techniques:
