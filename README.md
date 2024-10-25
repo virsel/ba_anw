@@ -43,3 +43,9 @@ https://www.youtube.com/watch?v=yv3TrD7kUb4
 
 Webinar: Log Analysis with Machine Learning to Find Root Cause Faster:  
 https://www.youtube.com/watch?v=MpYB4Qcl570
+
+rca baselines (code zum vorverarbeiten und modell training):  
+https://github.com/KnowledgeDiscovery/rca_baselines/tree/main
+
+mögliche lemma rca alternative:  
+https://github.com/IntelligentDDS/Nezha/tree/main

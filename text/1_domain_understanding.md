@@ -10,6 +10,63 @@
 - Nach Identifizierung der Grundursache können Korrekturmaßnahmen ergriffen werden, um ein erneutes Auftreten des Problems zu verhindern
 - RCA kann zeitaufwändig sein, ist aber eine lohnende Investition zur Verbesserung von Qualität und Zuverlässigkeit
 
+## Offline RCA
+- Training mit großem historischen Datensatz
+- Periodische komplette Neutrainings
+- Keine Anpassung zwischen Trainings
+- Beispiel: Wöchentliches/monatliches Neutraining
+- Wichtige Methoden:
+  * PC: Kausale Graphenerstellung mittels Unabhängigkeitstest
+  * Dynotears: Konstruiert dynamische Bayessche Netzwerke
+  * C-LSTM: Modelliert zeitliche Abhängigkeiten
+  * GOLEM: Verwendet relaxierte DAG-Beschränkungen
+  * REASON: Lernt intra- und inter-level kausale Beziehungen
+  * Nezha: Multi-modales Verfahren für Anomalie-Erkennung
+  * MULAN: Multi-modales Verfahren mit Korrelationslernen
+- Vorteile:
+  * Gründlichere Analyse möglich
+  * Kann komplexere Algorithmen verwenden
+  * Nutzt vollständige historische Daten
+  (https://arxiv.org/html/2406.05375v1 Kap. 4)
+
+## Online RCA
+- Initiales Training mit historischen Daten
+- Kontinuierliche Aktualisierung durch Mini-Batches
+- Behält gelerntes Wissen bei (inkrementelles Lernen)
+- Schnelle Anpassung an neue Systemzustände
+- Beispiel: 5-Minuten-Fenster für Updates
+- Wichtige Methoden:
+  * CORAL: Inkrementelles kausales Graphenlernen
+  * NOTEARS*: Online-Adaption von NOTEARS
+  * GOLEM*: Online-Version von GOLEM
+- Eigenschaften:
+  * Verwendet initiale normale Daten (z.B. 8 Stunden) für ersten Graph
+  * Kontinuierliche Aktualisierung bei neuen Datenbatches
+  * Schnellere Anpassung an sich ändernde Muster
+  (https://arxiv.org/html/2406.05375v1 Kap. 4)
+
+## Unterschied Online/Offline
+
+1. Update-Häufigkeit:
+   - Online: Häufige kleine Updates (Mini-Batches)
+   - Offline: Seltene große Updates (kompletter Datensatz)
+
+2. Lernmethode:
+   - Online: Inkrementelles Lernen (baut auf bestehendem Wissen auf)
+   - Offline: Komplettes Neutraining von Grund auf
+
+3. Ressourcennutzung:
+   - Online: Kontinuierliche kleine Berechnungen
+   - Offline: Periodische intensive Berechnungen
+
+4. Anpassungsfähigkeit:
+   - Online: Schnelle Reaktion auf neue Systemmuster
+   - Offline: Verzögerte Anpassung bis zum nächsten Training
+
+5. Praktischer Einsatz:
+   - Online: Gut für sich schnell ändernde Systeme
+   - Offline: Gut für stabile, vorhersehbare Systeme
+
 ## manuelles RCA:
  The manual RCA
 investigation consists of 5 steps: 1) Incident Detection, which typically relies on
