@@ -1,5 +1,5 @@
 ## problemstellung
-Traditional RCA methods, which rely on manual investigations of data sources such as logs and traces,
+Traditional RCA methods, which rely on manual investigations of data sources such as logs and traces,
 are often laborious, error-prone, and challenging for on-call
 engineers  
 https://arxiv.org/pdf/2305.15778 (Abstract)
