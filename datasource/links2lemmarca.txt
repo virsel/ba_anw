@@ -6,8 +6,6 @@ https://drive.google.com/drive/folders/1YLRviEq4ELrTsrpf8aatM-R4Sq6Bjn8R
 
 2024-10-07; herunterladbar, noch grob sichten!
 
-2024-10-11; Ausgepackt sind das erstmal 36,3GB, mit Editor gehen die großen files nicht, mit notepad++ gehts unter Win.
-
 
 #die Links zu "RAW"-Data von https://lemma-rca.github.io/docs/data.html sind tot, die Links zu Preprecessed Data funktionieren. Die Mail lemma-rca@gmail.com ist tot.
 
