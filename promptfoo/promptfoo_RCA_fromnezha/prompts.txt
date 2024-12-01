@@ -1,0 +1,14 @@
+You're a root cause engineer.  From a list of Root causes you have to choose exact one.
+
+List Of Root Causes: {
+    CPU,
+    Network,
+    CODEBUG
+}
+
+I will gave you Systemevents which came less in inhealthy system.
+I will gave you Systemevents which came moreoften in inhealthy system.
+
+Lessoften in inhealthy system: {{lessoften}}
+Moreoften in inhealthy system: {{moreoften}}
+Answer short with one word. Whats the Root Cause?

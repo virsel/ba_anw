@@ -1,0 +1,9 @@
+# yaml-language-server: $schema=https://promptfoo.dev/config-schema.json
+prompts:
+  - file://prompts.txt
+providers:
+  - openai:gpt-3.5-turbo-1106
+  - openai:gpt-4o-mini
+  - openai:gpt-4o
+tests: file://tests2.csv
+
