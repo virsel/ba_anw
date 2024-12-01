@@ -1,0 +1,111 @@
+# yaml-language-server: $schema=https://promptfoo.dev/config-schema.json
+
+description: "Root-Cause-Analysis Eval"
+
+prompts:
+  # - "Analyze the following abnormal and normal event traces and predict the root cause. The inject type is '{{inject_type}}'. Compare the expected event trace from the healthy system with the actual trace from the faulty system. Provide the most likely root cause based on the deviations."
+  # - "Given the comparison of healthy and faulty system event traces, and knowing that the inject type is '{{inject_type}}', identify the root cause of the issue."
+  # - "Identify the root cause of this failure. Analyze the deviations in event traces. The inject type is '{{inject_type}}'."
+
+# - 
+#   "Sie sind ein Root Cause Analyst.
+#   Identifizierte den Root Cause anhand der folgenden Fakten
+#   # inject_type: '{{inject_type}}'
+#   result_list_inhealthy_moreoften: '{{result_list_inhealthy_moreoften}}'
+#   result_list_inhealthy_lessoften: '{{result_list_inhealthy_lessoften}}'
+#   Mögliche Root Causes sind: '{{possible_root_cause}}'"
+
+- 
+  "Sie sind ein Root Cause Analyst.
+  Identifizierte den Root Cause anhand der folgenden Fakten
+  result_list_inhealthy_moreoften: '{{result_list_inhealthy_moreoften}}'
+  result_list_inhealthy_lessoften: '{{result_list_inhealthy_lessoften}}'
+  Mögliche Root Causes sind: '{{possible_root_cause}}'"
+
+providers:
+  # - id: openai:gpt-4o-mini
+  #   config:
+  #     temperature: 0
+  #     max_tokens: 128
+  #     apiKey: file://api_key.txt
+  - id: openai:gpt-4o
+    config:
+      temperature: 0
+      max_tokens: 128
+      apiKey: file://api_key.txt
+  # - id: openai:chat:llama-3.2-3b-instruct
+  #   config:
+  #     apiBaseUrl: http://localhost:1234/v1
+  #     apiKey: lm-studio
+
+defaultTest:
+  # options:
+  #   provider:
+  #     id: openai:chat:llama-3.2-3b-instruct
+  #     config:
+  #       apiBaseUrl: http://localhost:1234/v1
+  #       apiKey: lm-studio
+
+  options:
+    provider:
+        id: openai:gpt-4o
+        config:
+          apiKey: file://api_key.txt
+
+tests:
+  # Test case 1: CPU contention
+  - vars:
+      possible_root_cause: "['CpuUsageRate(%)'], ['NetworkP90(ms)'], ['Placing order started', 'Order placed complete'], ['Query product with name', 'Query product successfully'], ['Received ad request', 'No context provided'], ['Serving product page started', 'GetProduct start'], ['Start charge card', 'Charge successfully']"
+      abnormal_time: "2022-08-22 03:54"
+      normal_time: "2022-08-22 03:51"
+      inject_type: "cpu_contention"
+      result_list_inhealthy_moreoften: "[{'score': -0.5400894187779434, 'deepth': 3, 'pod': 'currencyservice-cf787dd48-vpjrd', 'events_expected': ['TraceID: <:TRACEID:> SpanID: <:SPANID:> Received conversion request', 'currencyservice hipstershop.CurrencyService/GetCurrencyData start'], 'events_actual': ['TraceID: <:TRACEID:> SpanID: <:SPANID:> Received conversion request', 'currencyservice hipstershop.CurrencyService/Carry start']}, {'score': -0.5384615384615384, 'deepth': 3, 'pod': 'currencyservice-cf787dd48-vpjrd', 'events_expected': ['TraceID: <:TRACEID:> SpanID: <:SPANID:> Getting supported currencies...', 'currencyservice grpc.hipstershop.CurrencyService/GetSupportedCurrencies end'], 'events_actual': ['TraceID: <:TRACEID:> SpanID: <:SPANID:> Getting supported currencies...', 'currencyservice hipstershop.CurrencyService/GetCurrencyData start']}, {'score': -0.5315315315315315, 'deepth': 4, 'pod': 'adservice-5f6585d649-fnmft', 'resource_alert': 'MemoryUsageRate(%)', 'events_expected': ['<:NUM:>:<:NUM:>:<:NUM:>.<:NUM:> INFO - TraceID: <:TRACEID:> SpanID: <:SPANID:> Received ad request (context words=<:ITEM:>', 'adservice hipstershop.AdService/<:SPANID:> start'], 'events_actual': ['<:NUM:>:<:NUM:>:<:NUM:>.<:NUM:> INFO - TraceID: <:TRACEID:> SpanID: <:SPANID:> Received ad request (context words=<:ITEM:>', '<:NUM:>:<:NUM:>:<:NUM:>.<:NUM:> INFO - TraceID: <:TRACEID:> SpanID: <:SPANID:> No context provided. Constructe random Ads start']}, {'score': -0.518854415274463, 'deepth': 2, 'pod': 'currencyservice-cf787dd48-vpjrd', 'events_expected': ['currencyservice grpc.hipstershop.CurrencyService/Convert start', 'currencyservice hipstershop.CurrencyService/Carry start'], 'events_actual': ['currencyservice grpc.hipstershop.CurrencyService/Convert start', 'currencyservice hipstershop.CurrencyService/GetCurrencyData start']}, {'score': -0.5053908355795148, 'deepth': 1, 'pod': 'frontend-579b9bff58-t2dbm', 'resource_alert': 'CpuUsageRate(%)', 'events_expected': ['TraceID: <:TRACEID:> SpanID: <:SPANID:> View user cart start', 'frontend hipstershop.RecommendationService/ListRecommendations start'], 'events_actual': ['TraceID: <:TRACEID:> SpanID: <:SPANID:> View user cart start', 'frontend hipstershop.ProductCatalogService/GetProduct start']}]"
+      result_list_inhealthy_lessoften: "[{'score': 1.0, 'deepth': 1, 'pod': 'frontend-579b9bff58-t2dbm', 'resource_alert': 'CpuUsageRate(%)', 'events_actual': ['frontend hipstershop.Frontend/Recv. start', 'CpuUsageRate(%)'], 'events_expected': ['frontend hipstershop.Frontend/Recv. start', 'TraceID: <:TRACEID:> SpanID: <:SPANID:> Request started']}, {'score': 0.5638418079096045, 'deepth': 2, 'pod': 'currencyservice-cf787dd48-vpjrd', 'events_actual': ['currencyservice grpc.hipstershop.CurrencyService/Convert start', 'TraceID: <:TRACEID:> SpanID: <:SPANID:> Received conversion request'], 'events_expected': ['currencyservice grpc.hipstershop.CurrencyService/Convert start', 'currencyservice hipstershop.CurrencyService/Carry start']}, {'score': 0.52, 'deepth': 3, 'pod': 'currencyservice-cf787dd48-vpjrd', 'events_actual': ['TraceID: <:TRACEID:> SpanID: <:SPANID:> Received conversion request', 'TraceID: <:TRACEID:> SpanID: <:SPANID:> Conversion request successful'], 'events_expected': ['TraceID: <:TRACEID:> SpanID: <:SPANID:> Received conversion request', 'currencyservice hipstershop.CurrencyService/GetCurrencyData start']}, {'score': 0.5140495867768595, 'deepth': 4, 'pod': 'adservice-5f6585d649-fnmft', 'resource_alert': 'MemoryUsageRate(%)', 'events_expected': ['adservice hipstershop.AdService/<:SPANID:> start', 'MemoryUsageRate(%)']}, {'score': 0.5100250626566416, 'deepth': 2, 'pod': 'currencyservice-cf787dd48-vpjrd', 'events_expected': ['currencyservice grpc.hipstershop.CurrencyService/GetSupportedCurrencies start', 'currencyservice hipstershop.CurrencyService/GetCurrencyData start']}]"
+      root_cause: "['CpuUsageRate(%)']"
+    assert:
+      - type: icontains
+        value: cpu
+      - type: javascript
+        value: output.includes('CpuUsageRate')
+
+  # # Test case 2: Network delay
+  # - vars:
+  #     abnormal_time: "2022-08-22 04:28"
+  #     normal_time: "2022-08-22 04:00"
+  #     inject_type: "network_delay"
+  #     result_list_inhealthy_moreoften: ['TraceID: <:TRACEID:> SpanID: <:SPANID:> GetCartAsync called with userId=<:USERID:>', 'cartservice hipstershop.CartService/EmptyCart start']
+  #     result_list_inhealthy_lessoften: ['TraceID: <:TRACEID:> SpanID: <:SPANID:> GetCartAsync called', 'NetworkP90(ms)']
+  #     root_cause: "network delay"
+  #   assert:
+  #     - type: icontains
+  #       value: network
+  #     - type: javascript
+  #       value: output.includes('network delay')
+
+  # # Test case 3: Code bug serving product page
+  # - vars:
+  #     abnormal_time: "2022-08-22 05:10"
+  #     normal_time: "2022-08-22 05:00"
+  #     inject_type: "code bug"
+  #     result_list_inhealthy_moreoften: ['TraceID: <:TRACEID:> SpanID: <:SPANID:> Serving product page started', 'frontend hipstershop.ProductCatalogService/GetProduct start']
+  #     result_list_inhealthy_lessoften: ['TraceID: <:TRACEID:> SpanID: <:SPANID:> Serving product page started', 'frontend hipstershop.CurrencyService/Carry start']
+  #     root_cause: "code bug serving product page"
+  #   assert:
+  #     - type: icontains
+  #       value: code bug
+  #     - type: javascript
+  #       value: output.includes('code bug serving product page')
+
+  # # Test case 4: General code bug
+  # - vars:
+  #     abnormal_time: "2022-08-22 05:20"
+  #     normal_time: "2022-08-22 05:00"
+  #     inject_type: "code bug"
+  #     result_list_inhealthy_moreoften: ['TraceID: <:TRACEID:> SpanID: <:SPANID:> Placing order started', 'frontend hipstershop.Frontend/Recv. start']
+  #     result_list_inhealthy_lessoften: ['TraceID: <:TRACEID:> SpanID: <:SPANID:> Placing order started', 'frontend hipstershop.CurrencyService/Carry start']
+  #     root_cause: "code bug"
+  #   assert:
+  #     - type: icontains
+  #       value: code bug
+  #     - type: javascript
+  #       value: output.includes('code bug')
