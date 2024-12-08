@@ -1,4 +1,4 @@
-#tests2.csv hat nur 8 Zeilen (zum ausprobieren, günstig und schnell) test3.csv hat "alles" was von der Datenvorverarbeitung übergeben wird.
+#tests3.csv hat nur 8 Zeilen (zum ausprobieren, günstig und schnell) test2.csv hat "alles" was von der Datenvorverarbeitung übergeben wird.
 prompts:
   - file://prompts.txt
 providers:
