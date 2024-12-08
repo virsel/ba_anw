@@ -1,9 +1,9 @@
-# yaml-language-server: $schema=https://promptfoo.dev/config-schema.json
+#tests2.csv hat nur 8 Zeilen (zum ausprobieren, günstig und schnell) test3.csv hat "alles" was von der Datenvorverarbeitung übergeben wird.
 prompts:
   - file://prompts.txt
 providers:
   - openai:gpt-3.5-turbo-1106
   - openai:gpt-4o-mini
   - openai:gpt-4o
-tests: file://tests2.csv
+tests: file://tests3.csv
 
