@@ -7,6 +7,10 @@ providers:
 #  - openai:gpt-3.5-turbo-1106
 #  - openai:gpt-4o-mini
 #  - openai:gpt-4o
-- id: openai:gpt-4o
+# - id: openai:gpt-4o
+  - id: openai:chat:llama-3.2-3b-instruct
+    config:
+      apiBaseUrl: http://localhost:1234/v1
+      apiKey: lm-studio
 tests: file://tests5.csv
 
