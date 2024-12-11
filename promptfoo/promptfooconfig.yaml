@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=https://promptfoo.dev/config-schema.json
+
+description: "Root-Cause-Analysis Eval"
+
+prompts:
+  - "Sie sind ein Root Cause Analyst. Identifizieren Sie den Root Cause basierend auf den folgenden Event-Traces:
+     \nErwartete häufige Events: {{result_list_inhealthy_moreoften}}.
+     \nErwartete seltene Events: {{result_list_inhealthy_lessoften}}.
+     \nMögliche Root Causes sind: ['CpuUsageRate(%)'], ['NetworkP90(ms)'], ['Placing order started', 'Order placed complete'], ['Query product with name', 'Query product successfully'], ['Received ad request', 'No context provided'], ['Serving product page started', 'GetProduct start'], ['Start charge card', 'Charge successfully'].
+     \nAntworten Sie in einem Satz mit Root Cause, dass ihrer Meinung nach am wahrscheinlichsten ist und erklären Sie warum dieser gewählt wurde"
+
+providers:
+  - id: openai:gpt-4o
+    config:
+      temperature: 0
+      max_tokens: 128
+      apiKey: file://api_key.txt
+
+defaultTest:
+  options:
+    provider:
+      id: openai:gpt-4o
+      config:
+        apiKey: file://api_key.txt
+
+# tests:
+#   # Test case 1: CPU contention
+#   - vars:
+#       # possible_root_cause: file://test.txt
+#       test: file://test.py
+#       abnormal_time: "2022-08-22 03:54"
+#       normal_time: "2022-08-22 03:51"
+#       inject_type: "cpu_contention"
+#       result_list_inhealthy_moreoften: "[{'score': 1.0, 'pod': 'frontend', 'events_expected': ['View cart', 'List recommendations'], 'events_actual': ['View cart', 'Get product']}]"
+#       result_list_inhealthy_lessoften: "[{'score': -0.54, 'pod': 'currencyservice', 'events_expected': ['Received conversion request', 'GetCurrencyData'], 'events_actual': ['Received conversion request', 'Carry']} ]"
+#       root_cause: "CpuUsageRate(%)"
+#     assert:
+#       - type: icontains
+#         value: "CpuUsageRate(%)"
+#       - type: javascript
+#         value: "output.includes('CpuUsageRate(%)')"
+
+tests: 'test.csv'
+
