@@ -1,9 +1,7 @@
 \chapter{Modelierung 1000 (Henning)}
 \label{sec:Kapitel3}
 
-Dieses Kapitel thematisiert die Phase Modeling des ref CRISP-DM Prozesses. Diese Phase hat eine hohe relevanz und wird typischerweise bei Projekten welche CRISP-DM methodisch verwenden mehrfach iteriert quelle. Ziel dieser Phase ist es aus den zuvor vorbereiteten Daten und gewonnen Erkenntnissen einen Mehrwert zu stifen quelle.
- Im Konkreten Fall sollen die zuvor gesammelten Daten genutzt werden um ein LLM acro in die Lage zu versetzen eine Schätzung zu machen welcher RCA acro quelle vorliegt. Innerhalb des Kapitels werden Ansätze zur Lösung diskutiert, diese sind die Zusammenfassung der verschiedenen Iterationen des durchlaufenen CRISP-dm acro Prozesses. 
- Ebenso werden besondere Herausforderungen sowie erste Erkenntnisse dargestellt, bevor dann im folgenden Kapitel die Qualität der Antworten der verwendeten LLMs qualitativ bewertet werden kann. 
+Dieses Kapitel thematisiert die Phase Modeling des ref CRISP-DM Prozesses. Diese Phase hat eine hohe relevanz und wird typischerweise bei Projekten welche CRISP-DM methodisch verwenden mehrfach iteriert quelle. Ziel dieser Phase ist es aus den zuvor vorbereiteten Daten und gewonnen Erkenntnissen einen Mehrwert zu stifen quelle. Im Konkreten Fall sollen die zuvor gesammelten Daten genutzt werden um ein LLM acro in die Lage zu versetzen eine Schätzung zu machen welcher RCA acro quelle vorliegt. Innerhalb des Kapitels werden Ansätze zur Lösung diskutiert, diese sind die Zusammenfassung der verschiedenen Iterationen des durchlaufenen CRISP-dm acro Prozesses. Ebenso werden besondere Herausforderungen sowie erste Erkenntnisse dargestellt, bevor dann im folgenden Kapitel die Qualität der Antworten der verwendeten LLMs qualitativ bewertet werden kann. 
 
 \section{Zielsetzung}
 \label{sec:Zielsetzung}
@@ -21,7 +19,7 @@ Liste, nzeha name einfügen quelle:
   Der zu definierende Prompt muss demnach ebenso 
 
 \section{Datenaufteilung}
-Ein normaler Ansatz wäre ein vortrainiertes LLM noch nachzutrainieren tbd rs quelle. Um dieses Nachtraining durchzuführen ist eine Aufteilung der bestehenden Daten in Trainingsdaten, Validierungsdaten und Testdaten oft sinnhaft qquelle. Konkret ist das in den verwendete Daten set tbd aus nezha ist frei verfügbar, es beinhaltet in der bereinigten, vorverarbeiteten Version ~112 Records, dem liegen 56 injezierte Fehler zugrunde. Typisch ist eine herangehensweise mit einer 70-20-10 Aufteilung, erweise ist 
+Ein normaler Ansatz wäre ein vortrainiertes LLM noch nachzutrainieren tbd rs quelle. Um dieses Nachtraining durchzuführen ist eine Aufteilung der bestehenden Daten in Trainingsdaten, Validierungsdaten und Testdaten oft sinnhaft qquelle. Konkret ist das in den verwendete Daten set tbd aus nezha ist frei verfügbar, es beinhaltet in der bereinigten, vorverarbeiteten Version ~112 Records, dem liegen 56 injezierte Fehler zugrunde. Typisch ist eine herangehensweise mit einer 70-20-10 Aufteilung, wobei die Aufteilung mit 70\% Trainingsdaten, 10\% Validierungsdaten und  20\% Testdaten (prüfen quelle) für viele Anwendungsfälle passend ist. Im vorliegenden konkreten Fall ist jedoch Wie bereits in  (ref Understanding) dargestellt, leider nur ein vergleichsweise geringer Datenbestand verfügbar. Ein Training auf diesen Bestand nach der vorher gezeigten Aufteilung ist als wenig stabil zu bewerten (quelle). Um eine Art Datenaufteilung dennoch auszuführen wurden im Rahmen der Versuche zum Modeling die Verfahren Few-shot und One-shot angewandt. Beide basieren darauf [Erklärtext, ggf. ref theorie]. Im Ergebnis konnten die besten Resultate erzielt werden wenn kein Nachtraining erfolgte.
 
 
 Da dieser Datenbestand zu klein ist um ein sinnhaftes Training für ein LLM durchzuführen quelle, musste eine andere 
