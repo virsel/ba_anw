@@ -32,7 +32,7 @@
 \contentsline {section}{\numberline {4.3}Abschnitt im Kapitel Datenvorverarbeitung...}{10}{section.4.3}%
 \contentsline {chapter}{\numberline {5}Modelierung 1000 (Henning)}{11}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Zielsetzung}{11}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Datenaufteilung}{11}{section.5.2}%
+\contentsline {section}{\numberline {5.2}Datenaufteilung}{12}{section.5.2}%
 \contentsline {section}{\numberline {5.3}Prompt-eng.}{12}{section.5.3}%
 \contentsline {chapter}{\numberline {6}Evaluierung 1000 (Henning + Alex)}{14}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Eval1}{14}{section.6.1}%
