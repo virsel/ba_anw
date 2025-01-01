@@ -10,21 +10,32 @@
 \chapter{Einleitung (Alex 600)}
 \label{sec:Einleitung} %Textmarke/Positionsmarke, um mit Autoref darauf zu verweisen.
 
+\todotext{Quellen von Word nach Latex übertragen}
 
-\todotext{Hier soll die eine Einleitung hin..}
+Die zunehmende Komplexität von IT-Systemen, insbesondere durch den Übergang zu Microservice-Architekturen, stellt Unternehmen vor neue Herausforderungen bei der Verwaltung und Fehlerbehebung dieser Systeme . Microservices bestehen aus kleinen, unabhängigen Services, die gemeinsam eine größere Anwendung bilden . Diese Architektur bietet Vorteile wie eine verbesserte Skalierbarkeit und Flexibilität . Allerdings führt die verteilte Natur von Microservices zu erheblichen Schwierigkeiten bei der Identifikation von Fehlerursachen, was die Root-Cause-Analyse (RCA) besonders herausfordernd macht .
 
-Zunächst kommt ein einleitender Text...
+Eine zuverlässige und schnelle RCA ist entscheidend, um technische Fehler und Anomalien in IT-Systemen frühzeitig zu finden und zu beheben. Herkömmliche Ansätze zur RCA basieren oft auf der manuellen Analyse von Logs und Metriken, was bei großen, verteilten Systemen zeitaufwendig und fehleranfällig ist . Mit der Einführung von Frameworks wie Nezha ist es möglich, den RCA-Prozess zu automatisieren und feingranulare Fehlerursachen auf Code-Ebene oder Ressourcentyp-Ebene zu identifizieren, indem multi-modale Beobachtungsdaten wie Metriken, Traces und Logs verwendet werden. Nezha transformiert diese unterschiedlichen Daten in eine einheitliche Darstellung, extrahiert daraus ein Muster und ermöglicht so eine interpretierbare RCA mit hoher Genauigkeit .
 
-\section{Problemstellung / Forschungsfragen}
+
+\section{Problemstellung}
+
+Trotz dieser Fortschritte gibt es weiterhin Verbesserungspotenzial, insbesondere bei der Interpretation und Priorisierung von Fehlerursachen. Hier setzt diese Arbeit an: Es wird untersucht, ob die Integration eines Large Language Models (LLM), das auf der Verarbeitung natürlicher Sprache trainiert wurde, die Ergebnisse von Nezha weiter verbessern kann. Ziel ist es, die von Nezha generierten Ranglisten der Fehlerursachen als Eingabedaten für das LLM zu verwenden und zu überprüfen, ob das Modell in der Lage ist, präzisere oder ergänzende Einschätzungen zur tatsächlichen Fehlerursache abzugeben.
 
 \section{Lösungsansatz}
 \label{sec:loesungsansatz}
 
-\section{Aufbau der Arbeit}
-In \autoref{sec:Kapitel2} wird das und das Thema\todo{Bla bla}{}  behandelt...
-Dieses und jenes Thema wird in \autoref{sec:Kapitel3} näher betrachtet...
+Nezha erreicht bereits eine Genauigkeit von bis zu 89,77 Prozent bei der Klassifizierung der Fehlerursache, indem es multi-modale Daten kombiniert und Ereignisgraphen erstellt, die fehlerfreien und fehlerhaften Phasen von Microservices vergleichen . Diese Ranglisten der verdächtigen Ursachen bieten die Grundlage für das LLM, das durch seine Fähigkeit zur Analyse sprachlicher Muster potenziell zusätzliche Einsichten liefern kann. Insbesondere wird geprüft, ob das LLM durch die Analyse, der von Nezha gelieferten Daten eine Einschätzung der Fehlerursache abgeben und somit die Genauigkeit der RCA weiter steigern kann.
 
-\blindtext
+Die zentrale Forschungsfrage dieser Arbeit lautet daher: Kann ein LLM auf Grundlage, der von Nezha gelieferten Daten zur Fehleranalyse eine fundierte Einschätzung über die tatsächliche Fehlerursache abgeben und somit die Genauigkeit der RCA in Microservices steigern?
+
+Die Arbeit verfolgt das Ziel, durch die Integration des LLMs die bestehenden Mechanismen zur Fehleridentifikation in Microservices zu optimieren und die Effizienz der RCA des Nezha Frameworks zu verbessern.
+
+
+\section{Aufbau der Arbeit}
+%In \autoref{sec:Kapitel2} wird das und das Thema\todo{Bla bla}{}  behandelt...
+%Dieses und jenes Thema wird in \autoref{sec:Kapitel3} näher betrachtet...
+
+%\blindtext
 
 
 
