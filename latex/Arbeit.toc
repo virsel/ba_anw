@@ -34,17 +34,17 @@
 \contentsline {section}{\numberline {5.1}Zielsetzung}{11}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Datenaufteilung}{11}{section.5.2}%
 \contentsline {section}{\numberline {5.3}Prompt-eng.}{12}{section.5.3}%
-\contentsline {chapter}{\numberline {6}Evaluierung 1000 (Henning + Alex)}{13}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Eval1}{13}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Eval2}{13}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Eval3}{13}{section.6.3}%
-\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick (alle 1000)}{14}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Fazit}{14}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Ausblick}{14}{section.7.2}%
-\contentsline {chapter}{\numberline {A}Thema des ersten Anhangs}{15}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Der erste Abschnitt des ersten Anhangs}{15}{section.A.1}%
-\contentsline {chapter}{\numberline {B}Experteninterview: \blx@tocontentsinit {0}\citeauthor {Interviewpartnerin2021}}{16}{appendix.B}%
-\contentsline {chapter}{\nonumberline Literatur}{18}{chapter*.10}%
-\contentsline {chapter}{\nonumberline Sonstige Quellen}{19}{chapter*.11}%
-\contentsline {chapter}{\nonumberline Experteninterviews}{20}{chapter*.12}%
+\contentsline {chapter}{\numberline {6}Evaluierung 1000 (Henning + Alex)}{14}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Eval1}{14}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Eval2}{14}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Eval3}{14}{section.6.3}%
+\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick (alle 1000)}{15}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Fazit}{15}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Ausblick}{15}{section.7.2}%
+\contentsline {chapter}{\numberline {A}Thema des ersten Anhangs}{16}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Der erste Abschnitt des ersten Anhangs}{16}{section.A.1}%
+\contentsline {chapter}{\numberline {B}Experteninterview: \blx@tocontentsinit {0}\citeauthor {Interviewpartnerin2021}}{17}{appendix.B}%
+\contentsline {chapter}{\nonumberline Literatur}{19}{chapter*.10}%
+\contentsline {chapter}{\nonumberline Sonstige Quellen}{20}{chapter*.11}%
+\contentsline {chapter}{\nonumberline Experteninterviews}{21}{chapter*.12}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
