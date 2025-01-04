@@ -19,9 +19,25 @@ Wie die Ergebnisse aussehen, wo "gut" klappte, was noch besser sein könnte. Ggf
 
 Hier kommt eine Übersicht des Evaluierung Kapitels hin.
 
-\section{Eval1}
-\label{sec:abschnitt3.1}
+\section{Test - Framework}
+\label{sec:Framework}
+Um programmatische Tests des Prompts durchzuführen und zu bewerten wurde das Tool promptfoo (quelle ref.) verwendet. Dieses Framework ist dienlich bei der Enwiklung, Verbesserung und dem Test von \ac{LLM}s und Prompts. Dem Framework wurden folgende Inputs gegeben:
 
-\section{Eval2}
+\begin{itemize}
+    \item promptfooconfig.yaml, konfiguriert den test grundsätzlich, definiert promptquelle, die provider und die Datenquelle
+    \item prompts.txt, definiert den prompt, exemplarisch in \autoref{fig:finalprompt} zu sehen
+    \item tests.csv liefert Datenquellen
+\end{itemize}
 
-\section{Eval3}
+Der Dokumentation (quelle) von promptfoo für die Deklaration von csv-Files ist ensprechend gefolgt worden\footnote{Relevantestes Merkmal ist die Spalte \_\_expected}. Mit den so vorbereiteten Daten ist promptfoo in der Lage das Ergebnis des \ac{LLM}s mit der wirklichen Fehlerursache abzugleichen und darauf basierend eine Aussage zur Genauigkeit zu treffen. Die Spalte \_\_expected übernimmt dabei die Funktion eines Asserts, also einer Behauptung die es zu prüfen gilt. Durch die Nutzung von Asserts lässt sich die Erwartung des Ergebnisses hinterlegen und in der Folge dann abgleichen. 
+
+\section{Methodik}
+Sobald das Testframework wie unter \autoref{sec:framework} konfiguriert war, konnten die Tests programmatisch durchlaufen werden. Bei Änderungen des Prompts und einem erneuten Testdurchlauf konnte direkt abgelesen werden ob die Trefferrate gestiegen oder gefallen ist. Eine beispielhafte Ausgabe von promptfoo während der Entwicklung ist in \autoref{} zu sehen. Neben der Trefferrate\footnote{xx\% passing (x/y cases)} werden auch der verwendete Prompt als auch Metadaten zum \ac{API}-Aufruf ersichtlich. Zum Beispiel die Latenz und die Kosten des Aufrufes in Euro. Hier wird die Stärke des iterativen Vorgehensmodells nach \ac{CRISP-DM} deutlich, denn nach jeder Änderung am Prompt oder auch an den angelieferten Daten kann die Veränderung des Ergebnisses direkt abgelesen werden. Ebenso werden verschiedene \ac{LLM} mit den identischen Eingabeparametern versorgt und die Ergebnisse erlauben einen Quervergleich der einzelnen \ac{LLM}s untereinander. Neben den abgebildeten Modellen von OpenAI wurden auch lokale LLMs\footnote{Z.B. Llama-3.3-70B-Instruct-GGUF mittels LM Studio} in die Tests miteinbezogen. Die Ergebenisse der lokalen Modelle blieben weit unter den Erwartungen zurück, Trefferraten unter 50%.
+
+\section{Ergebnisse}
+Als Baseline zur Erkennung der RCA (quelle ac) ggf. ref Kapitel vorher und Foschungsfrage!! dient die Angabe der Fehlerursache aus dem nezha-Framework. Nach mehreren iterationen der Promptentwicklung und Änderung der priorisierung der error logs sowie ergänzung 
+
+4o-mini: 96.43% passing (54/56 cases)
+4o: 98.21% passing (55/56 cases)
+
+Als Schlussfolgerund der durchgeführten Evaluierung kann festgehalten werden, das zum einen LLMs sehr gut in der Lage sind, ...
