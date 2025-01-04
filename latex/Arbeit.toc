@@ -4,6 +4,7 @@
 \contentsline {chapter}{\nonumberline Tabellenverzeichnis}{vii}{chapter*.5}%
 \contentsline {chapter}{Abkürzungsverzeichnis}{viii}{chapter*.6}%
 \contentsline {chapter}{\numberline {1}Einleitung (Alex 600)}{1}{chapter.1}%
+<<<<<<< HEAD
 \contentsline {section}{\numberline {1.1}Problemstellung}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Lösungsansatz}{2}{section.1.2}%
 \contentsline {section}{\numberline {1.3}Aufbau der Arbeit}{2}{section.1.3}%
@@ -39,6 +40,41 @@
 \contentsline {chapter}{\numberline {6}Evaluierung 1000 (Henning + Alex)}{15}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Eval1}{15}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Eval2}{15}{section.6.2}%
+=======
+\contentsline {section}{\numberline {1.1}Problemstellung / Forschungsfragen}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Lösungsansatz}{1}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Aufbau der Arbeit}{1}{section.1.3}%
+\contentsline {chapter}{\numberline {2}Theorie (Domänenverständnis) 900 (Alex)}{2}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Schwierigkeiten}{2}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Abschnitt im Kapitel zwei...}{2}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Weitere Kommandos}{2}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Literaturzitate}{2}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Einbinden von Bildern}{2}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Mehrere Bilder in einer Abbildung}{3}{subsection.2.3.3}%
+\contentsline {section}{\numberline {2.4}Einbinden von Codeausschnitten}{5}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Abkürzungen}{6}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Querverweise}{6}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Erstellen von Tabellen}{6}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}Listen und Aufzählungen}{7}{subsection.2.5.3}%
+\contentsline {subsection}{\numberline {2.5.4}Mathematische Formeln}{7}{subsection.2.5.4}%
+\contentsline {subsection}{\numberline {2.5.5}Silbentrennung}{8}{subsection.2.5.5}%
+\contentsline {section}{\numberline {2.6}Abschnitt im Kapitel zwei...}{8}{section.2.6}%
+\contentsline {chapter}{\numberline {3}Datenverständnis Inhalte...(Paul 800)}{9}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Abschnitt im Kapitel Datenverständnis...}{9}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Abschnitt im Kapitel Datenverständnis...}{9}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Abschnitt im Kapitel Datenverständnis...}{9}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Datenvorverarbeitung Inhalte (Paul 700)}{10}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Abschnitt im Kapitel Datenvorverarbeitung...}{10}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Abschnitt im Kapitel Datenvorverarbeitung...}{10}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Abschnitt im Kapitel Datenvorverarbeitung...}{10}{section.4.3}%
+\contentsline {chapter}{\numberline {5}Modellierung}{11}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Zielsetzung}{11}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Datenaufteilung}{12}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Promptengineering}{12}{section.5.3}%
+\contentsline {chapter}{\numberline {6}Evaluierung}{14}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Test - Framework}{14}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Methodik}{15}{section.6.2}%
+>>>>>>> hd-text-01012025
 \contentsline {section}{\numberline {6.3}Eval3}{15}{section.6.3}%
 \contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick (alle 1000)}{16}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Fazit}{16}{section.7.1}%
@@ -46,4 +82,10 @@
 \contentsline {chapter}{\numberline {A}Thema des ersten Anhangs}{17}{appendix.A}%
 \contentsline {section}{\numberline {A.1}Der erste Abschnitt des ersten Anhangs}{17}{section.A.1}%
 \contentsline {chapter}{\numberline {B}Experteninterview: \blx@tocontentsinit {0}\citeauthor {Interviewpartnerin2021}}{18}{appendix.B}%
+<<<<<<< HEAD
+=======
+\contentsline {chapter}{\nonumberline Literatur}{20}{chapter*.13}%
+\contentsline {chapter}{\nonumberline Sonstige Quellen}{21}{chapter*.14}%
+\contentsline {chapter}{\nonumberline Experteninterviews}{22}{chapter*.15}%
+>>>>>>> hd-text-01012025
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

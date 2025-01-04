@@ -1,5 +1,6 @@
-\chapter{Modelierung 1000 (Henning)}
-\label{sec:Kapitel3}
+% 1000 Henning
+\chapter{Modellierung}
+\label{cha:Modellierung}
 
 Dieses Kapitel thematisiert die Phase Modeling des ref CRISP-DM Prozesses. Diese Phase hat eine hohe relevanz und wird typischerweise bei Projekten welche CRISP-DM methodisch verwenden mehrfach iteriert quelle. Ziel dieser Phase ist es aus den zuvor vorbereiteten Daten und gewonnen Erkenntnissen einen Mehrwert zu stifen quelle. Im Konkreten Fall sollen die zuvor gesammelten Daten genutzt werden um ein LLM acro in die Lage zu versetzen eine Schätzung zu machen welcher RCA acro quelle vorliegt. Innerhalb des Kapitels werden Ansätze zur Lösung diskutiert, diese sind die Zusammenfassung der verschiedenen Iterationen des durchlaufenen CRISP-dm acro Prozesses. Ebenso werden besondere Herausforderungen sowie erste Erkenntnisse dargestellt, bevor dann im folgenden Kapitel die Qualität der Antworten der verwendeten LLMs qualitativ bewertet werden kann. 
 
@@ -8,7 +9,6 @@ Dieses Kapitel thematisiert die Phase Modeling des ref CRISP-DM Prozesses. Diese
 
 Die Ausgaben aus dem modell sollen nicht nur die Forschungsfrage beantworten (quelle todo src) sondern auch mit den von nezha (src ref) gelieferten Ergebnissen verglichen werden. Da die Ausgabe von nezha aus einer Liste von möglichen RCA auswählt entspricht die durch das LLM zu bewerkstelligende Aufgabe am ehestesten der einer Klassifikation. Nezha trifft in der Ausgabe die folgenden Klassen\footnote{Im acro nezha Framework in file.ext ersichtlich}:
 
-Itemize:
 \begin{itemize}
 \item exception
 \item return
@@ -32,11 +32,25 @@ Ein Blick in die Literatur offenbart eine Vielzahl von möglichen Techniken zu P
 
 Wie bereits in \autoref{sec:datasplit} beschrieben wurde Zero-shot Learning eingesetzt, obwohl der Literatur nach ein Few-Shot Verfahren signifikant bessere Ergebnisse erzielen sollte\autocite{Brown2020}[S.4]. Ursachen für diese nicht vorhergesehene Feststellung könnten darin liegen das \citeauthor{Brown2020} in Ihrer Forschung noch auf ChatGPT 3\footnote{Für den Aufbau des Prompts dieser Arbeit wurde ChatGPT 4 verwendet.} bezogen haben oder ggf. auch aus der Qualität oder Quantität der zugrundeliegenden Daten.
 
+Der finale, optimierte Prompt ist in \autoref{fig:finalprompt} erstlich. Die mit den geschweiften Klammern gekennzeichneten Begriffe sind wie Variablen zu sehen und werden zur Laufzeit durch den aufrufenden code gefüllt. Quelle der eingesetzten Variablen sind die vorverarbeiteten Daten aus \autoref{quelle vorverarbeitung}. 
+
+\begin{figure}
+    \centering
+    \includegraphics [width=0.5\linewidth] {bilder/finalprompt.png}
+    \caption [Finaler, optimierter Prompt]{Finaler, optimierter Prompt. Quelle: eigene Darstellung}
+    \label{fig:finalprompt}
+\end{figure}
+%ggf noch von https://github.com/virsel/ba_anw_promptfoo einfügen, Rückfrage ob relevant! quelle todo! 
+
+
 
 
 Folgt man den Ausführungen zum Promptengineering von quelle sind dazu folgende Punkte beachtenswert:
 
 Few-Shot Prompting: Das Modell erhält wenige Beispiele innerhalb des Prompts, um die gewünschte Aufgabe zu verstehen und auszuführen. Dies verbessert die Genauigkeit, indem es dem Modell Kontext und Struktur für die erwartete Antwort bietet. 
+
+
+
 
 TODO:
 Rechtschreiber!!
